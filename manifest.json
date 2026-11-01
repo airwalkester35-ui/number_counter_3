@@ -1,0 +1,10 @@
+{
+  "name": "3桁数字カウンター",
+  "short_name": "3桁カウンター",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#111827",
+  "theme_color": "#111827",
+  "lang": "ja"
+}
