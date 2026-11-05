@@ -112,12 +112,19 @@
     } catch (_) {}
 
     function render() {
-      const first = ((state.start + state.step) % 10 + 10) % 10;
-      const digits = [first, (first + 1) % 10, (first + 2) % 10];
-      numberEl.textContent = digits.map(n => String(n).padStart(3, '0')).join('・');
-      startInput.value = String(state.start);
-      try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch (_) {}
-    }
+  const first = state.start + state.step;
+  const digits = [first, first + 1, first + 2];
+
+  numberEl.textContent = digits
+    .map(n => String(n).padStart(3, '0'))
+    .join('・');
+
+  startInput.value = String(state.start);
+
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+  } catch (_) {}
+}
 
     document.getElementById('next').addEventListener('click', () => {
       state.step += 1; render(); messageEl.textContent = '';
