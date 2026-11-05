@@ -1,4 +1,4 @@
-const CACHE_NAME = 'number-counter-3-v1';
+const CACHE_NAME = 'number-counter-3-v2';
 const FILES = ['./', './index.html', './manifest.json'];
 
 self.addEventListener('install', event => {
